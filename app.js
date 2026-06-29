@@ -345,7 +345,25 @@ const TRANSLATIONS = {
         customizer_bg_color: "Custom Background Color",
         customizer_bg_image: "Background Image URL",
         customizer_upload_bg: "Upload Image",
-        customizer_clear_bg: "Remove Image"
+        customizer_clear_bg: "Remove Image",
+        menu_guide: "Guide & Notes",
+        guide_title: "Guide & Important Notes",
+        guide_step_title: "🚀 3 Steps to Plan",
+        guide_step1_name: "Step 1: Discover",
+        guide_step1_desc: "Define your career vision, strengths, and growth areas.",
+        guide_step2_name: "Step 2: Find Gaps",
+        guide_step2_desc: "Evaluate your current skills against your target role's requirements.",
+        guide_step3_name: "Step 3: Bridge Gaps",
+        guide_step3_desc: "Set actionable goals and enroll in necessary courses.",
+        guide_security_title: "🔒 100% Data Security",
+        guide_security_p1: "This application runs entirely in your browser using <code>localStorage</code>.",
+        guide_security_p2: "<strong>Your data is completely private.</strong> It is only saved on your current device and is never sent to any server or database over the internet.",
+        guide_security_p3: "<em>Note: If you open this exact link on another device, it will show a blank canvas. Everyone has their own isolated workspace!</em>",
+        guide_backup_title: "💾 How to Never Lose Data",
+        guide_backup_p1: "If you clear your browser history/cache or switch devices, your data will be gone.",
+        guide_backup_p2: "<strong>The Solution:</strong>",
+        guide_backup_btn1: "Click <strong>Backup Plan</strong> <i data-lucide=\"download\" style=\"width:14px;height:14px;display:inline-block\"></i> (bottom left) to download your data as a <code>.json</code> file.",
+        guide_backup_btn2: "Click <strong>Restore Plan</strong> <i data-lucide=\"upload\" style=\"width:14px;height:14px;display:inline-block\"></i> on any device to upload the file and continue right where you left off!"
     },
     vi: {
         logo_text: "Career Development Plan",
@@ -464,7 +482,25 @@ const TRANSLATIONS = {
         customizer_bg_color: "Màu nền tùy chọn",
         customizer_bg_image: "Hình nền tùy chọn",
         customizer_upload_bg: "Tải ảnh lên",
-        customizer_clear_bg: "Xóa hình nền"
+        customizer_clear_bg: "Xóa ảnh",
+        menu_guide: "Hướng dẫn & Lưu ý",
+        guide_title: "Hướng dẫn & Lưu ý quan trọng",
+        guide_step_title: "🚀 3 Bước Lên Kế Hoạch",
+        guide_step1_name: "Bước 1: Khám phá",
+        guide_step1_desc: "Định hình tầm nhìn sự nghiệp, thế mạnh và điểm yếu.",
+        guide_step2_name: "Bước 2: Tìm lỗ hổng",
+        guide_step2_desc: "Đánh giá kỹ năng hiện tại so với yêu cầu của vị trí mơ ước.",
+        guide_step3_name: "Bước 3: Lấp khoảng trống",
+        guide_step3_desc: "Thiết lập mục tiêu hành động và các khóa học cần thiết.",
+        guide_security_title: "🔒 Dữ liệu an toàn 100%",
+        guide_security_p1: "Ứng dụng này hoạt động hoàn toàn trên trình duyệt của bạn (dùng <code>localStorage</code>).",
+        guide_security_p2: "<strong>Dữ liệu của bạn là hoàn toàn riêng tư.</strong> Nó chỉ được lưu trên máy của bạn và KHÔNG bao giờ bị gửi lên mạng hay bất kỳ máy chủ nào.",
+        guide_security_p3: "<em>Lưu ý: Nếu bạn mở link web này ở một máy khác, nó sẽ hiện ra một bản kế hoạch trắng tinh. Mỗi người có một không gian làm việc độc lập!</em>",
+        guide_backup_title: "💾 Bí kíp không mất dữ liệu",
+        guide_backup_p1: "Vì dữ liệu nằm trên trình duyệt, nếu bạn xóa lịch sử web (Clear Cache) hoặc đổi máy tính, dữ liệu sẽ trống trơn.",
+        guide_backup_p2: "<strong>Giải pháp:</strong>",
+        guide_backup_btn1: "Bấm nút <strong>Sao lưu kế hoạch</strong> <i data-lucide=\"download\" style=\"width:14px;height:14px;display:inline-block\"></i> (góc trái dưới) để lưu file <code>.json</code> về máy.",
+        guide_backup_btn2: "Khi cần, bấm <strong>Khôi phục kế hoạch</strong> <i data-lucide=\"upload\" style=\"width:14px;height:14px;display:inline-block\"></i> trên bất kỳ máy nào để up file lên và làm tiếp!"
     }
 };
 

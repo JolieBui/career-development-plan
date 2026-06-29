@@ -77,6 +77,10 @@
                     <i data-lucide="layout-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
+                <a href="#guide" class="menu-item" data-tab="guide">
+                    <i data-lucide="help-circle"></i>
+                    <span data-i18n="menu_guide">Guide & Notes</span>
+                </a>
                 <a href="#vision" class="menu-item" data-tab="vision">
                     <i data-lucide="compass"></i>
                     <span>Career Vision</span>
@@ -159,7 +163,39 @@
 
             <!-- Tab Content Screens -->
             <div class="tab-content-container">
-                <!-- Tab: Dashboard -->
+
+                <!-- Guide Tab -->
+                <section id="guide" class="tab-pane">
+                    <div class="section-header">
+                        <h2><i data-lucide="book-open"></i> <span data-i18n="guide_title">Guide & Important Notes</span></h2>
+                    </div>
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3 data-i18n="guide_step_title">🚀 3 Steps to Plan</h3>
+                            <ul class="guide-list">
+                                <li><strong><span data-i18n="guide_step1_name">Step 1: Discover</span> (🧭):</strong> <span data-i18n="guide_step1_desc">Define your career vision, strengths, and growth areas.</span></li>
+                                <li><strong><span data-i18n="guide_step2_name">Step 2: Find Gaps</span> (📈):</strong> <span data-i18n="guide_step2_desc">Evaluate your current skills against your target role's requirements.</span></li>
+                                <li><strong><span data-i18n="guide_step3_name">Step 3: Bridge Gaps</span> (🎯):</strong> <span data-i18n="guide_step3_desc">Set actionable goals and enroll in necessary courses.</span></li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <h3 data-i18n="guide_security_title">🔒 100% Data Security</h3>
+                            <p data-i18n="guide_security_p1">This application runs entirely in your browser using <code>localStorage</code>.</p>
+                            <p data-i18n="guide_security_p2"><strong>Your data is completely private.</strong> It is only saved on your current device and is never sent to any server or database over the internet.</p>
+                            <p data-i18n="guide_security_p3"><em>Note: If you open this exact link on another device, it will show a blank canvas. Everyone has their own isolated workspace!</em></p>
+                        </div>
+                        <div class="guide-card highlight-card">
+                            <h3 data-i18n="guide_backup_title">💾 How to Never Lose Data</h3>
+                            <p data-i18n="guide_backup_p1">If you clear your browser history/cache or switch devices, your data will be gone.</p>
+                            <p data-i18n="guide_backup_p2"><strong>The Solution:</strong></p>
+                            <ul class="guide-list">
+                                <li>Click <strong>Backup Plan</strong> <i data-lucide="download" style="width:14px;height:14px;display:inline-block"></i> (bottom left) to download your data as a <code>.json</code> file.</li>
+                                <li>Click <strong>Restore Plan</strong> <i data-lucide="upload" style="width:14px;height:14px;display:inline-block"></i> on any device to upload the file and continue right where you left off!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="dashboard" class="tab-pane active">
                     <div class="metrics-grid">
                         <div class="metric-card positive glass">
