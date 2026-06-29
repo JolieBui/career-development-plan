@@ -1594,12 +1594,25 @@ body.has-bg-image .app-main {
         top: 0;
         z-index: 100;
         box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        overflow: visible; /* Ensure absolute dropdown menu isn't clipped */
     }
 
     .sidebar-header {
         margin-bottom: 0;
-        padding: 1rem 1rem 0.5rem 1rem;
+        padding: 1rem;
         border-bottom: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .sidebar-brand-row {
+        flex: 1;
+    }
+
+    .sidebar-collapse-btn {
+        display: none;
     }
 
     .sidebar-menu {
@@ -1653,7 +1666,8 @@ body.has-bg-image .app-main {
     }
 
     .sidebar-footer {
-        display: none;
+        display: flex;
+        margin-top: auto; /* Push to the bottom of the dropdown menu */
     }
     
     .sidebar-footer .backup-actions::-webkit-scrollbar {
