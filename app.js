@@ -965,14 +965,19 @@ function updateUILanguage() {
             if ((el.tagName === "INPUT" || el.tagName === "TEXTAREA") && el.hasAttribute("placeholder")) {
                 el.setAttribute("placeholder", t[key]);
             } else {
-                // Keep the lucide icon if the element contains one inside
-                const icon = el.querySelector("i[data-lucide]");
-                if (icon) {
-                    el.innerHTML = "";
-                    el.appendChild(icon);
-                    el.appendChild(document.createTextNode(" " + t[key]));
-                } else {
+                // If translation contains HTML tags, render it directly
+                if (t[key].includes("<") && t[key].includes(">")) {
                     el.innerHTML = t[key];
+                } else {
+                    // Keep the lucide icon if the element contains one inside
+                    const icon = el.querySelector("i[data-lucide]");
+                    if (icon) {
+                        el.innerHTML = "";
+                        el.appendChild(icon);
+                        el.appendChild(document.createTextNode(" " + t[key]));
+                    } else {
+                        el.innerHTML = t[key];
+                    }
                 }
             }
         }
