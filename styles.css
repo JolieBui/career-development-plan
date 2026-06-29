@@ -468,6 +468,7 @@ button, input, select, textarea {
     width: 100%;
     outline: none;
     transition: all 0.15s ease;
+    text-align: left; /* Force left alignment for iOS date inputs */
 }
 
 .editable-input:hover {

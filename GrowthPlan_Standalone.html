@@ -508,6 +508,7 @@ button, input, select, textarea {
     width: 100%;
     outline: none;
     transition: all 0.15s ease;
+    text-align: left; /* Force left alignment for iOS date inputs */
 }
 
 .editable-input:hover {
@@ -1857,23 +1858,22 @@ body.has-bg-image .app-main {
                     <i data-lucide="history"></i>
                     <span data-i18n="menu_history">Activity History</span>
                 </a>
-            </nav>
 
-            <div class="sidebar-footer">
-                <div class="backup-actions">
-                    <button id="export-btn" class="btn btn-secondary btn-sm">
-                        <i data-lucide="download"></i> <span data-i18n="export_btn">Backup Plan</span>
-                    </button>
-                    <button id="import-btn" class="btn btn-secondary btn-sm">
-                        <i data-lucide="upload"></i> <span data-i18n="import_btn">Restore Plan</span>
-                    </button>
-                    <button id="reset-btn" class="btn btn-secondary btn-sm" style="color: var(--accent-red); border-color: rgba(255, 69, 58, 0.3);">
-                        <i data-lucide="refresh-cw"></i> <span data-i18n="reset_btn">Reset Data</span>
-                    </button>
-                    <input type="file" id="import-file-input" style="display: none;" accept=".json">
+                <div class="sidebar-footer">
+                    <div class="backup-actions">
+                        <button id="export-btn" class="btn btn-secondary btn-sm">
+                            <i data-lucide="download"></i> <span data-i18n="export_btn">Backup Plan</span>
+                        </button>
+                        <button id="import-btn" class="btn btn-secondary btn-sm">
+                            <i data-lucide="upload"></i> <span data-i18n="import_btn">Restore Plan</span>
+                        </button>
+                        <button id="reset-btn" class="btn btn-secondary btn-sm" style="color: var(--accent-red); border-color: rgba(255, 69, 58, 0.3);">
+                            <i data-lucide="refresh-cw"></i> <span data-i18n="reset_btn">Reset Data</span>
+                        </button>
+                        <input type="file" id="import-file-input" style="display: none;" accept=".json">
+                    </div>
                 </div>
-
-            </div>
+            </nav>
         </aside>
 
         <!-- Main Content Area -->
