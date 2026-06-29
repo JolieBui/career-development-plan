@@ -2259,8 +2259,8 @@ function renderChart() {
     const currentLevels = appData.skills.map(s => parseInt(s.current.split("")[0]) || 0);
     const requiredLevels = appData.skills.map(s => parseInt(s.required.split("")[0]) || 0);
 
-    // If there are less than 3 skills, Radar charts don't look good. Fallback to Bar chart.
-    const chartType = labelData.length >= 3 ? "radar" : "bar";
+    // Always use radar chart as per user preference
+    const chartType = "radar";
 
     const data = {
         labels: labelData,
