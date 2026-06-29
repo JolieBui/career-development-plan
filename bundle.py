@@ -18,7 +18,7 @@ embedded_css = f"<style>\n{css_content}\n</style>"
 html_content = html_content.replace(css_link, embedded_css)
 
 # Replace JS script tag
-js_script = '<script src="app.js?v=2.8"></script>'
+js_script = '<script src="app.js?v=2.9"></script>'
 embedded_js = f"<script>\n{js_content}\n</script>"
 html_content = html_content.replace(js_script, embedded_js)
 

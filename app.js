@@ -1905,7 +1905,7 @@ function drawShareCardCanvas(avatarImg, isVi, roleValue) {
     ctx.restore();
     
     const link = document.createElement("a");
-    link.download = `JolieSpace_${roleValue.replace(/\s+/g, "_")}.png`;
+    link.download = `Career_Plan_${roleValue.replace(/\s+/g, "_")}.png`;
     link.href = canvas.toDataURL("image/png");
     link.click();
 }
