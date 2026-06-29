@@ -1055,11 +1055,10 @@ function initEventListeners() {
     if (mobileMenuBtn && sidebarMenu) {
         mobileMenuBtn.addEventListener("click", () => {
             sidebarMenu.classList.toggle("mobile-open");
-            const icon = mobileMenuBtn.querySelector("i");
             if (sidebarMenu.classList.contains("mobile-open")) {
-                icon.setAttribute("data-lucide", "x");
+                mobileMenuBtn.innerHTML = '<i data-lucide="x"></i>';
             } else {
-                icon.setAttribute("data-lucide", "menu");
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
             }
             lucide.createIcons();
         });
@@ -1069,11 +1068,8 @@ function initEventListeners() {
         menuItems.forEach(item => {
             item.addEventListener("click", () => {
                 sidebarMenu.classList.remove("mobile-open");
-                const icon = mobileMenuBtn.querySelector("i");
-                if (icon) {
-                    icon.setAttribute("data-lucide", "menu");
-                    lucide.createIcons();
-                }
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
+                lucide.createIcons();
             });
         });
     }

@@ -1692,16 +1692,7 @@ body.has-bg-image .app-main {
     }
 
     .sidebar-footer {
-        display: block;
-        padding-top: 1rem;
-    }
-    
-    .sidebar-footer .backup-actions {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
-        overflow-x: auto;
-        scrollbar-width: none;
+        display: none;
     }
     
     .sidebar-footer .backup-actions::-webkit-scrollbar {
@@ -1720,6 +1711,7 @@ body.has-bg-image .app-main {
         padding: 1rem;
         overflow-y: visible;
         margin-left: 0;
+        gap: 1.5rem;
     }
 
     .metrics-grid, .guide-grid {
@@ -1750,6 +1742,16 @@ body.has-bg-image .app-main {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+        padding: 1rem;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .info-box, .guide-card, .card {
+        padding: 1.25rem;
     }
     
     .callout-icon {
@@ -3497,11 +3499,10 @@ function initEventListeners() {
     if (mobileMenuBtn && sidebarMenu) {
         mobileMenuBtn.addEventListener("click", () => {
             sidebarMenu.classList.toggle("mobile-open");
-            const icon = mobileMenuBtn.querySelector("i");
             if (sidebarMenu.classList.contains("mobile-open")) {
-                icon.setAttribute("data-lucide", "x");
+                mobileMenuBtn.innerHTML = '<i data-lucide="x"></i>';
             } else {
-                icon.setAttribute("data-lucide", "menu");
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
             }
             lucide.createIcons();
         });
@@ -3511,11 +3512,8 @@ function initEventListeners() {
         menuItems.forEach(item => {
             item.addEventListener("click", () => {
                 sidebarMenu.classList.remove("mobile-open");
-                const icon = mobileMenuBtn.querySelector("i");
-                if (icon) {
-                    icon.setAttribute("data-lucide", "menu");
-                    lucide.createIcons();
-                }
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
+                lucide.createIcons();
             });
         });
     }

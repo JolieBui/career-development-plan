@@ -1652,16 +1652,7 @@ body.has-bg-image .app-main {
     }
 
     .sidebar-footer {
-        display: block;
-        padding-top: 1rem;
-    }
-    
-    .sidebar-footer .backup-actions {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
-        overflow-x: auto;
-        scrollbar-width: none;
+        display: none;
     }
     
     .sidebar-footer .backup-actions::-webkit-scrollbar {
@@ -1680,6 +1671,7 @@ body.has-bg-image .app-main {
         padding: 1rem;
         overflow-y: visible;
         margin-left: 0;
+        gap: 1.5rem;
     }
 
     .metrics-grid, .guide-grid {
@@ -1710,6 +1702,16 @@ body.has-bg-image .app-main {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+        padding: 1rem;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .info-box, .guide-card, .card {
+        padding: 1.25rem;
     }
     
     .callout-icon {
