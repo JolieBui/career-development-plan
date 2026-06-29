@@ -1595,17 +1595,27 @@ body.has-bg-image .app-main {
     }
 
     .sidebar-footer {
+        display: block;
+        padding-top: 1rem;
+    }
+    
+    .sidebar-footer .backup-actions {
         display: flex;
         flex-direction: row;
         gap: 0.5rem;
         overflow-x: auto;
-        padding-top: 1rem;
+        scrollbar-width: none;
     }
     
-    .sidebar-footer .export-btn, .sidebar-footer .import-btn {
+    .sidebar-footer .backup-actions::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebar-footer .backup-actions button {
         flex: 1;
         white-space: nowrap;
         padding: 0.75rem;
+        min-width: max-content;
     }
 
     .app-main {

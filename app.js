@@ -1041,7 +1041,7 @@ function initEventListeners() {
 
 
     // Personalization Share Card Download
-    document.getElementById("download-share-card-btn").addEventListener("click", generateShareCard);
+
 
     // Clear History Log
     const clearHistoryBtn = document.getElementById("clear-history-btn");

@@ -1635,17 +1635,27 @@ body.has-bg-image .app-main {
     }
 
     .sidebar-footer {
+        display: block;
+        padding-top: 1rem;
+    }
+    
+    .sidebar-footer .backup-actions {
         display: flex;
         flex-direction: row;
         gap: 0.5rem;
         overflow-x: auto;
-        padding-top: 1rem;
+        scrollbar-width: none;
     }
     
-    .sidebar-footer .export-btn, .sidebar-footer .import-btn {
+    .sidebar-footer .backup-actions::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebar-footer .backup-actions button {
         flex: 1;
         white-space: nowrap;
         padding: 0.75rem;
+        min-width: max-content;
     }
 
     .app-main {
@@ -1747,9 +1757,7 @@ body.has-bg-image .app-main {
                         <i data-lucide="sun" class="sun-icon"></i>
                         <i data-lucide="moon" class="moon-icon"></i>
                     </button>
-                    <button id="download-share-card-btn" class="icon-btn" title="Download Share Card">
-                        <i data-lucide="award"></i>
-                    </button>
+
                     <button id="customizer-btn2" class="icon-btn" title="Theme Customizer">
                         <i data-lucide="palette"></i>
                     </button>
@@ -3413,7 +3421,7 @@ function initEventListeners() {
 
 
     // Personalization Share Card Download
-    document.getElementById("download-share-card-btn").addEventListener("click", generateShareCard);
+
 
     // Clear History Log
     const clearHistoryBtn = document.getElementById("clear-history-btn");
