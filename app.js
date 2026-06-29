@@ -809,12 +809,7 @@ function updateUILanguage() {
     };
 
     safeSetText(".logo-text", t.logo_text);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='dashboard']", `<i data-lucide="layout-dashboard"></i> <span>${t.menu_dashboard}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='vision']", `<i data-lucide="compass"></i> <span>${t.menu_vision}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='strengths']", `<i data-lucide="sparkles"></i> <span>${t.menu_strengths}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='skills']", `<i data-lucide="trending-up"></i> <span>${t.menu_skills}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='goals']", `<i data-lucide="target"></i> <span>${t.menu_goals}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='history']", `<i data-lucide="history"></i> <span>${t.menu_history}</span>`);
+    // Sidebar menus are now handled by the generic data-i18n loop
 
     safeSetHTML("#export-btn", `<i data-lucide="download"></i> ${t.export_btn}`);
     safeSetHTML("#import-btn", `<i data-lucide="upload"></i> ${t.import_btn}`);
@@ -961,6 +956,26 @@ function updateUILanguage() {
         else if (opt.value === "Not started") opt.innerText = t.status_not_started_opt;
         else if (opt.value === "In progress") opt.innerText = t.status_in_progress_opt;
         else if (opt.value === "Completed") opt.innerText = t.status_completed_opt;
+    });
+
+    // Generic data-i18n handler for all elements
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+            if (el.tagName === "INPUT" && el.hasAttribute("placeholder")) {
+                el.setAttribute("placeholder", t[key]);
+            } else {
+                // Keep the lucide icon if the element contains one inside
+                const icon = el.querySelector("i[data-lucide]");
+                if (icon) {
+                    el.innerHTML = "";
+                    el.appendChild(icon);
+                    el.appendChild(document.createTextNode(" " + t[key]));
+                } else {
+                    el.innerHTML = t[key];
+                }
+            }
+        }
     });
 
     // Re-create icons to apply styles

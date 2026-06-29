@@ -1596,27 +1596,27 @@ body.has-bg-image .app-main {
             <nav class="sidebar-menu">
                 <a href="#dashboard" class="menu-item active" data-tab="dashboard">
                     <i data-lucide="layout-dashboard"></i>
-                    <span>Dashboard</span>
+                    <span data-i18n="menu_dashboard">Dashboard</span>
+                </a>
+                <a href="#vision" class="menu-item" data-tab="vision">
+                    <i data-lucide="compass"></i>
+                    <span data-i18n="menu_vision">Career Vision</span>
+                </a>
+                <a href="#strengths" class="menu-item" data-tab="strengths">
+                    <i data-lucide="sparkles"></i>
+                    <span data-i18n="menu_strengths">Strengths & Growth</span>
+                </a>
+                <a href="#skills" class="menu-item" data-tab="skills">
+                    <i data-lucide="trending-up"></i>
+                    <span data-i18n="menu_skills">Skill Gaps</span>
+                </a>
+                <a href="#goals" class="menu-item" data-tab="goals">
+                    <i data-lucide="target"></i>
+                    <span data-i18n="menu_goals">Goals & Courses</span>
                 </a>
                 <a href="#guide" class="menu-item" data-tab="guide">
                     <i data-lucide="help-circle"></i>
                     <span data-i18n="menu_guide">Guide & Notes</span>
-                </a>
-                <a href="#vision" class="menu-item" data-tab="vision">
-                    <i data-lucide="compass"></i>
-                    <span>Career Vision</span>
-                </a>
-                <a href="#strengths" class="menu-item" data-tab="strengths">
-                    <i data-lucide="sparkles"></i>
-                    <span>Strengths & Growth</span>
-                </a>
-                <a href="#skills" class="menu-item" data-tab="skills">
-                    <i data-lucide="trending-up"></i>
-                    <span>Skill Gaps</span>
-                </a>
-                <a href="#goals" class="menu-item" data-tab="goals">
-                    <i data-lucide="target"></i>
-                    <span>Goals & Courses</span>
                 </a>
                 <a href="#history" class="menu-item" data-tab="history">
                     <i data-lucide="history"></i>
@@ -1648,7 +1648,7 @@ body.has-bg-image .app-main {
                 <div class="header-callout">
                     <div class="callout-icon">💡</div>
                     <div class="callout-content">
-                        <p>This Career Development Plan is a practical tool to help you take ownership of your growth. Use it to define where you want to go, understand what skills you need to build, and turn your goals into a clear, structured roadmap.</p>
+                        <p data-i18n="header_callout">This Career Development Plan is a practical tool to help you take ownership of your growth. Use it to define where you want to go, understand what skills you need to build, and turn your goals into a clear, structured roadmap.</p>
                     </div>
                 </div>
 
@@ -1657,23 +1657,23 @@ body.has-bg-image .app-main {
 
                     
                     <div class="profile-field">
-                        <span class="field-label">Current Role</span>
+                        <span class="field-label" data-i18n="profile_role">Current Role</span>
                         <input type="text" id="profile-title" class="editable-input" value="Marketing Lead" placeholder="Enter job title...">
                     </div>
                     <div class="profile-field">
-                        <span class="field-label">Start Date</span>
+                        <span class="field-label" data-i18n="profile_start">Start Date</span>
                         <input type="date" id="profile-start-date" class="editable-input" value="2025-12-14">
                     </div>
                     <div class="profile-field promo-toggle-field">
-                        <span class="field-label">Promotions</span>
+                        <span class="field-label" data-i18n="profile_promo">Promotions</span>
                         <details class="promotions-details">
-                            <summary class="details-summary">View Details</summary>
+                            <summary class="details-summary" data-i18n="profile_promo_view">View Details</summary>
                             <div class="details-content">
                                 <ul id="promotions-list">
                                     <!-- Dynamic promotions go here -->
                                 </ul>
                                 <div class="add-promo-box">
-                                    <input type="text" id="new-promo-input" placeholder="Add promotion history...">
+                                    <input type="text" id="new-promo-input" placeholder="Add promotion history..." data-i18n="profile_promo_add">
                                     <button id="add-promo-btn" class="icon-btn"><i data-lucide="plus"></i></button>
                                 </div>
                             </div>
@@ -3018,12 +3018,7 @@ function updateUILanguage() {
     };
 
     safeSetText(".logo-text", t.logo_text);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='dashboard']", `<i data-lucide="layout-dashboard"></i> <span>${t.menu_dashboard}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='vision']", `<i data-lucide="compass"></i> <span>${t.menu_vision}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='strengths']", `<i data-lucide="sparkles"></i> <span>${t.menu_strengths}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='skills']", `<i data-lucide="trending-up"></i> <span>${t.menu_skills}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='goals']", `<i data-lucide="target"></i> <span>${t.menu_goals}</span>`);
-    safeSetHTML(".sidebar-menu .menu-item[data-tab='history']", `<i data-lucide="history"></i> <span>${t.menu_history}</span>`);
+    // Sidebar menus are now handled by the generic data-i18n loop
 
     safeSetHTML("#export-btn", `<i data-lucide="download"></i> ${t.export_btn}`);
     safeSetHTML("#import-btn", `<i data-lucide="upload"></i> ${t.import_btn}`);
@@ -3170,6 +3165,26 @@ function updateUILanguage() {
         else if (opt.value === "Not started") opt.innerText = t.status_not_started_opt;
         else if (opt.value === "In progress") opt.innerText = t.status_in_progress_opt;
         else if (opt.value === "Completed") opt.innerText = t.status_completed_opt;
+    });
+
+    // Generic data-i18n handler for all elements
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key]) {
+            if (el.tagName === "INPUT" && el.hasAttribute("placeholder")) {
+                el.setAttribute("placeholder", t[key]);
+            } else {
+                // Keep the lucide icon if the element contains one inside
+                const icon = el.querySelector("i[data-lucide]");
+                if (icon) {
+                    el.innerHTML = "";
+                    el.appendChild(icon);
+                    el.appendChild(document.createTextNode(" " + t[key]));
+                } else {
+                    el.innerHTML = t[key];
+                }
+            }
+        }
     });
 
     // Re-create icons to apply styles
