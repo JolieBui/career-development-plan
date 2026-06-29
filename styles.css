@@ -1411,14 +1411,23 @@ body.has-bg-image .app-main {
 }
 
 .footer-inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .footer-brand {
+    justify-self: start;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1439,6 +1448,8 @@ body.has-bg-image .app-main {
 }
 
 .footer-copy {
+    justify-self: center;
+    text-align: center;
     font-size: 0.7rem;
     color: var(--text-muted);
     letter-spacing: 0.02em;
@@ -1448,6 +1459,7 @@ body.has-bg-image .app-main {
 }
 
 .footer-links {
+    justify-self: end;
     font-size: 0.68rem;
     font-weight: 700;
     color: var(--text-muted);
