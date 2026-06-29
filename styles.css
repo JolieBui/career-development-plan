@@ -1529,3 +1529,154 @@ body.has-bg-image .app-main {
     height: 14px;
     pointer-events: none;
 }
+
+/* =====================
+   RESPONSIVE LAYOUT
+   ===================== */
+@media (max-width: 1024px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .guide-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profile-card {
+        flex-wrap: wrap;
+    }
+    .profile-field {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .app-sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--border-color);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        position: static;
+    }
+
+    .sidebar-header {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .sidebar-menu::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    .menu-item {
+        white-space: nowrap;
+        padding: 0.75rem 1rem;
+        margin: 0;
+        border: 2px solid var(--border-color);
+    }
+
+    .menu-item.active {
+        border-left: 2px solid var(--border-color);
+        border-bottom: 4px solid var(--border-color);
+    }
+
+    .sidebar-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding-top: 1rem;
+    }
+    
+    .sidebar-footer .export-btn, .sidebar-footer .import-btn {
+        flex: 1;
+        white-space: nowrap;
+        padding: 0.75rem;
+    }
+
+    .app-main {
+        height: auto;
+        padding: 1rem;
+        overflow-y: visible;
+        margin-left: 0;
+    }
+
+    .metrics-grid, .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        flex-direction: column;
+    }
+
+    .profile-field {
+        flex: 1 1 100%;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        width: 100%;
+        margin-top: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+    }
+
+    .data-table {
+        min-width: 600px; /* Forces scroll instead of squishing columns */
+    }
+
+    .header-callout {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .callout-icon {
+        margin-bottom: 0.5rem;
+    }
+    
+    .logo-container h1 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .add-row-btn, .add-btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .action-cell {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
