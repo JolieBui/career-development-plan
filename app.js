@@ -1049,6 +1049,35 @@ function initEventListeners() {
         clearHistoryBtn.addEventListener("click", clearHistory);
     }
 
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-toggle");
+    const sidebarMenu = document.querySelector(".sidebar-menu");
+    if (mobileMenuBtn && sidebarMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+            sidebarMenu.classList.toggle("mobile-open");
+            const icon = mobileMenuBtn.querySelector("i");
+            if (sidebarMenu.classList.contains("mobile-open")) {
+                icon.setAttribute("data-lucide", "x");
+            } else {
+                icon.setAttribute("data-lucide", "menu");
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu when a tab is clicked
+        const menuItems = sidebarMenu.querySelectorAll(".menu-item");
+        menuItems.forEach(item => {
+            item.addEventListener("click", () => {
+                sidebarMenu.classList.remove("mobile-open");
+                const icon = mobileMenuBtn.querySelector("i");
+                if (icon) {
+                    icon.setAttribute("data-lucide", "menu");
+                    lucide.createIcons();
+                }
+            });
+        });
+    }
+
     // Filter & Search Event Listeners
     document.getElementById("skill-search").addEventListener("input", (e) => {
         tableFilters.skillSearch = e.target.value;
