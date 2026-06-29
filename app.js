@@ -75,132 +75,18 @@
 // Default Pre-populated Career Development Data
 const DEFAULT_DATA = {
     profile: {
-        title: "Senior Product Manager",
-        startDate: "2023-08-15",
-        promotions: [
-            "Product Manager - 01/2022 - 08/2023",
-            "Associate Product Manager - 06/2020 - 12/2021"
-        ]
+        title: "",
+        startDate: "",
+        promotions: []
     },
-    jobResponsibilities: [
-        "Lead cross-functional teams of engineering, design, and data science to execute the product roadmap from ideation to launch",
-        "Define and track core product OKRs, iterating based on quantitative analytics and qualitative user feedback",
-        "Spearhead the successful launch of the new AI-driven recommendation engine, increasing user retention by 22%",
-        "Collaborate closely with C-level stakeholders to align product strategy with long-term business goals",
-        "Mentor and coach junior PMs, establishing best practices for sprint planning and product requirement docs (PRDs)"
-    ],
-    vision: "I want to transition from leading individual high-impact product squads to defining the overarching product strategy for an entire business unit. My goal is to become a VP of Product within the next 3 years, building a culture of rapid experimentation, deep user empathy, and relentless execution.",
-    targetRole: "VP of Product\n- Set product vision and strategy for the entire portfolio.\n- Build and scale a world-class product organization.\n- Partner with the executive team to drive company-wide P&L outcomes.",
-    strengths: [
-        { id: "s1", strength: "Data-Driven Decision Making", details: "Highly proficient in SQL and Amplitude. I rely on hard data rather than gut feeling to prioritize the roadmap, which led to a 15% increase in conversion last quarter." },
-        { id: "s2", strength: "Cross-Functional Leadership", details: "Known for aligning engineering, design, and marketing teams under tight deadlines without formal authority." }
-    ],
-    growthAreas: [
-        { id: "g1", growthArea: "Executive Presence & Board-Level Communication", details: "I need to learn how to communicate complex product trade-offs succinctly to the Board of Directors and investors." },
-        { id: "g2", growthArea: "Scaling & Org Design", details: "I excel at leading a squad, but managing multiple product managers and designing a scalable team structure is a new challenge." },
-        { id: "g3", growthArea: "P&L Management", details: "Need to develop a deeper understanding of financial modeling, pricing strategy, and unit economics." }
-    ],
-    skills: [
-        {
-            id: "sk1",
-            name: "Product Strategy & Vision",
-            current: "4 - Advanced",
-            required: "5 - Expert",
-            gap: "Moving from 1-year planning to 3-year strategic bets",
-            notes: "Need to focus on market expansion and competitive moats."
-        },
-        {
-            id: "sk2",
-            name: "Executive Communication",
-            current: "3 - Proficient",
-            required: "5 - Expert",
-            gap: "Need to communicate efficiently at the C-suite/Board level",
-            notes: "Practice 'bottom-line up front' (BLUF) communication style."
-        },
-        {
-            id: "sk3",
-            name: "P&L & Financial Modeling",
-            current: "2 - Intermediate",
-            required: "4 - Advanced",
-            gap: "Need to tie product metrics directly to revenue and margin impact",
-            notes: "Work closely with the VP of Finance to model the next big feature launch."
-        },
-        {
-            id: "sk4",
-            name: "Organizational Design",
-            current: "2 - Intermediate",
-            required: "4 - Advanced",
-            gap: "Need to know how to structure squads and tribes as we scale",
-            notes: "Read 'Team Topologies' and 'Empowered'."
-        },
-        {
-            id: "sk5",
-            name: "Go-To-Market (GTM) Strategy",
-            current: "3 - Proficient",
-            required: "4 - Advanced",
-            gap: "Need to master enterprise pricing and sales enablement",
-            notes: "Partner with PMM on the Q3 enterprise tier launch."
-        }
-    ],
-    goals: [
-        {
-            id: "go1",
-            title: "Launch the AI Recommendation Engine to 100% of users",
-            status: "Completed",
-            deadline: "2026-02-15",
-            notes: "Successfully rolled out. Lifted retention by 22%."
-        },
-        {
-            id: "go2",
-            title: "Design the 2027 Product Roadmap and secure Board approval",
-            status: "In progress",
-            deadline: "2026-10-31",
-            notes: "Drafting the strategic narrative. Need to align with Sales on key enterprise requests."
-        },
-        {
-            id: "go3",
-            title: "Hire and onboard 2 new Senior Product Managers",
-            status: "In progress",
-            deadline: "2026-08-15",
-            notes: "Sourcing candidates. Interviewing 4 finalists this week."
-        },
-        {
-            id: "go4",
-            title: "Complete an Executive Leadership Coaching program",
-            status: "Not started",
-            deadline: "2026-12-01",
-            notes: "Researching coaches. Budget approved by HR."
-        },
-        {
-            id: "go5",
-            title: "Define and implement a new pricing model for the Enterprise tier",
-            status: "In progress",
-            deadline: "2026-09-30",
-            notes: "Analyzing competitor pricing and running elasticity tests."
-        }
-    ],
-    courses: [
-        {
-            id: "c1",
-            name: "Reforge: Product Strategy",
-            status: "Completed"
-        },
-        {
-            id: "c2",
-            name: "Executive Presence & Influence (Stanford GSB)",
-            status: "In progress"
-        },
-        {
-            id: "c3",
-            name: "Financial Modeling for Tech Startups",
-            status: "Not started"
-        },
-        {
-            id: "c4",
-            name: "Reforge: Scaling Product Delivery",
-            status: "Not started"
-        }
-    ]
+    jobResponsibilities: [],
+    vision: "",
+    targetRole: "",
+    strengths: [],
+    growthAreas: [],
+    skills: [],
+    goals: [],
+    courses: []
 };
 
 // Translation Dictionary
