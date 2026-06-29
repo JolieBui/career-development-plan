@@ -209,35 +209,35 @@
                             <div class="metric-icon"><i data-lucide="book-open"></i></div>
                             <div class="metric-details">
                                 <span class="metric-value" id="active-courses-count">0</span>
-                                <span class="metric-label">Active Courses</span>
+                                <span class="metric-label" data-i18n="metric_courses">Active Courses</span>
                             </div>
                         </div>
                         <div class="metric-card warning glass">
                             <div class="metric-icon"><i data-lucide="shield-alert"></i></div>
                             <div class="metric-details">
                                 <span class="metric-value" id="critical-gaps-count">0</span>
-                                <span class="metric-label">Critical Gaps</span>
+                                <span class="metric-label" data-i18n="metric_gaps">Critical Gaps</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="dashboard-charts-row">
                         <div class="chart-card glass">
-                            <h3 class="card-title">Skill Levels Overview</h3>
+                            <h3 class="card-title" data-i18n="card_skills_overview">Skill Levels Overview</h3>
                             <div class="chart-container">
                                 <canvas id="skillsChart"></canvas>
                             </div>
                         </div>
 
                         <div class="overview-callout-card glass">
-                            <h3 class="card-title">Job Responsibilities</h3>
+                            <h3 class="card-title" data-i18n="card_responsibilities">Job Responsibilities</h3>
                             <div class="callout-card-body">
                                 <ul class="responsibilities-list" id="dashboard-jd-list">
                                     <!-- Dynamic JDs will load here -->
                                 </ul>
                                 <div class="add-jd-box">
-                                    <input type="text" id="new-jd-input" placeholder="Add new responsibility...">
-                                    <button id="add-jd-btn" class="btn btn-primary btn-sm"><i data-lucide="plus"></i> Add</button>
+                                    <input type="text" id="new-jd-input" placeholder="Add new responsibility..." data-i18n="new_jd_placeholder">
+                                    <button id="add-jd-btn" class="btn btn-primary btn-sm" data-i18n="add_btn"><i data-lucide="plus"></i> Add</button>
                                 </div>
                             </div>
                         </div>
@@ -248,40 +248,40 @@
                 <section id="vision" class="tab-pane">
                     <div class="grid-2-col">
                         <div class="vision-card glass">
-                            <h2 class="section-title"><i data-lucide="eye"></i> Career Vision (12–24 Months)</h2>
-                            <p class="section-subtitle">A clear statement of where you want to be in the next 1–2 years.</p>
+                            <h2 class="section-title" data-i18n="vision_title"><i data-lucide="eye"></i> Career Vision (12–24 Months)</h2>
+                            <p class="section-subtitle" data-i18n="vision_subtitle">A clear statement of where you want to be in the next 1–2 years.</p>
                             
                             <div class="prompt-box">
                                 <ul>
-                                    <li>What role or level do you want to grow into?</li>
-                                    <li>What type of work energises you the most?</li>
-                                    <li>What kind of problems do you want to solve?</li>
-                                    <li>What impact do you want to be known for?</li>
+                                    <li data-i18n="vision_p1">What role or level do you want to grow into?</li>
+                                    <li data-i18n="vision_p2">What type of work energises you the most?</li>
+                                    <li data-i18n="vision_p3">What kind of problems do you want to solve?</li>
+                                    <li data-i18n="vision_p4">What impact do you want to be known for?</li>
                                 </ul>
                             </div>
 
                             <div class="editor-area">
-                                <label for="vision-text" class="field-label">Write your vision:</label>
-                                <textarea id="vision-text" class="rich-textarea" placeholder="Describe your 1-2 year career vision here..."></textarea>
+                                <label for="vision-text" class="field-label" data-i18n="vision_label">Write your vision:</label>
+                                <textarea id="vision-text" class="rich-textarea" placeholder="Describe your 1-2 year career vision here..." data-i18n="vision_placeholder"></textarea>
                             </div>
                         </div>
 
                         <div class="vision-card glass">
-                            <h2 class="section-title"><i data-lucide="milestone"></i> Target Role or Level</h2>
-                            <p class="section-subtitle">Define the next specific step in your career journey.</p>
+                            <h2 class="section-title" data-i18n="target_role_title"><i data-lucide="milestone"></i> Target Role or Level</h2>
+                            <p class="section-subtitle" data-i18n="target_role_subtitle">Define the next specific step in your career journey.</p>
                             
                             <div class="prompt-box">
                                 <ul>
-                                    <li>Next level up in your current role</li>
-                                    <li>A senior version of your role</li>
-                                    <li>A cross-functional pivot</li>
-                                    <li>A new specialisation</li>
+                                    <li data-i18n="target_role_p1">Next level up in your current role</li>
+                                    <li data-i18n="target_role_p2">A senior version of your role</li>
+                                    <li data-i18n="target_role_p3">A cross-functional pivot</li>
+                                    <li data-i18n="target_role_p4">A new specialisation</li>
                                 </ul>
                             </div>
 
                             <div class="editor-area">
-                                <label for="target-role-text" class="field-label">Write your target role / steps:</label>
-                                <textarea id="target-role-text" class="rich-textarea" placeholder="Detail the target title, requirements, or pivots you aim for..."></textarea>
+                                <label for="target-role-text" class="field-label" data-i18n="target_role_label">Write your target role / steps:</label>
+                                <textarea id="target-role-text" class="rich-textarea" placeholder="Detail the target title, requirements, or pivots you aim for..." data-i18n="target_role_placeholder"></textarea>
                             </div>
                         </div>
                     </div>
@@ -292,17 +292,17 @@
                     <div class="stack-layout">
                         <div class="table-card glass">
                             <div class="table-header-row">
-                                <h2 class="section-title"><i data-lucide="award"></i> Core Strengths</h2>
-                                <button id="add-strength-btn" class="btn btn-secondary btn-sm"><i data-lucide="plus"></i> Add Row</button>
+                                <h2 class="section-title" data-i18n="strengths_title"><i data-lucide="award"></i> Core Strengths</h2>
+                                <button id="add-strength-btn" class="btn btn-secondary btn-sm" data-i18n="add_row_btn"><i data-lucide="plus"></i> Add Row</button>
                             </div>
-                            <p class="section-subtitle">Identify what you want to be known for and what strengths you want to deepen.</p>
+                            <p class="section-subtitle" data-i18n="strengths_subtitle">Identify what you want to be known for and what strengths you want to deepen.</p>
                             
                             <div class="table-responsive">
                                 <table class="interactive-table" id="strengths-table">
                                     <thead>
                                         <tr>
-                                            <th>Strength</th>
-                                            <th>Details or Examples</th>
+                                            <th data-i18n="th_strength">Strength</th>
+                                            <th data-i18n="th_details">Details or Examples</th>
                                             <th class="col-actions"></th>
                                         </tr>
                                     </thead>
@@ -315,17 +315,17 @@
 
                         <div class="table-card glass">
                             <div class="table-header-row">
-                                <h2 class="section-title"><i data-lucide="shield-alert"></i> Growth Areas</h2>
-                                <button id="add-growth-btn" class="btn btn-secondary btn-sm"><i data-lucide="plus"></i> Add Row</button>
+                                <h2 class="section-title" data-i18n="growth_title"><i data-lucide="shield-alert"></i> Growth Areas</h2>
+                                <button id="add-growth-btn" class="btn btn-secondary btn-sm" data-i18n="add_row_btn"><i data-lucide="plus"></i> Add Row</button>
                             </div>
-                            <p class="section-subtitle">Identify areas where improvements or new capabilities will make the most impact.</p>
+                            <p class="section-subtitle" data-i18n="growth_subtitle">Identify areas where improvements or new capabilities will make the most impact.</p>
                             
                             <div class="table-responsive">
                                 <table class="interactive-table" id="growths-table">
                                     <thead>
                                         <tr>
-                                            <th>Growth Area</th>
-                                            <th>Details or Examples</th>
+                                            <th data-i18n="th_growth_area">Growth Area</th>
+                                            <th data-i18n="th_details">Details or Examples</th>
                                             <th class="col-actions"></th>
                                         </tr>
                                     </thead>
@@ -342,10 +342,10 @@
                 <section id="skills" class="tab-pane">
                     <div class="table-card glass">
                         <div class="table-header-row">
-                            <h2 class="section-title"><i data-lucide="align-left"></i> Skill Gap Assessment</h2>
-                            <button id="add-skill-btn" class="btn btn-primary"><i data-lucide="plus"></i> Add Skill</button>
+                            <h2 class="section-title" data-i18n="skills_title"><i data-lucide="align-left"></i> Skill Gap Assessment</h2>
+                            <button id="add-skill-btn" class="btn btn-primary" data-i18n="add_skill_btn"><i data-lucide="plus"></i> Add Skill</button>
                         </div>
-                        <p class="section-subtitle">Map the critical skills needed for your target role, assess your current level, and track the gaps.</p>
+                        <p class="section-subtitle" data-i18n="skills_subtitle">Map the critical skills needed for your target role, assess your current level, and track the gaps.</p>
 
                         <div class="table-controls">
                             <div class="control-group search-group">
@@ -365,12 +365,12 @@
                             <table class="interactive-table" id="skills-table">
                                 <thead>
                                     <tr>
-                                        <th>Skill</th>
-                                        <th>Current Level</th>
-                                        <th>Required Level</th>
-                                        <th>Gap Description</th>
-                                        <th>Notes</th>
-                                        <th class="col-actions">Actions</th>
+                                        <th data-i18n="th_skill">Skill</th>
+                                        <th data-i18n="th_current">Current Level</th>
+                                        <th data-i18n="th_required">Required Level</th>
+                                        <th data-i18n="th_gap">Gap Description</th>
+                                        <th data-i18n="th_notes">Notes</th>
+                                        <th class="col-actions" data-i18n="th_actions">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -386,10 +386,10 @@
                     <div class="stack-layout">
                         <div class="table-card glass">
                             <div class="table-header-row">
-                                <h2 class="section-title"><i data-lucide="target"></i> Goals (Next 6-12 Months)</h2>
-                                <button id="add-goal-btn" class="btn btn-primary btn-sm"><i data-lucide="plus"></i> Add Goal</button>
+                                <h2 class="section-title" data-i18n="goals_title"><i data-lucide="target"></i> Goals (Next 6-12 Months)</h2>
+                                <button id="add-goal-btn" class="btn btn-primary btn-sm" data-i18n="add_goal_btn"><i data-lucide="plus"></i> Add Goal</button>
                             </div>
-                            <p class="section-subtitle">Actions and milestones that will move you closer to your vision.</p>
+                            <p class="section-subtitle" data-i18n="goals_subtitle">Actions and milestones that will move you closer to your vision.</p>
 
                             <div class="table-controls">
                                 <div class="control-group search-group">
@@ -410,11 +410,11 @@
                                 <table class="interactive-table" id="goals-table">
                                     <thead>
                                         <tr>
-                                            <th>Goal Description</th>
-                                            <th>Status</th>
-                                            <th>Deadline</th>
-                                            <th>Notes</th>
-                                            <th class="col-actions"></th>
+                                            <th data-i18n="th_goal_desc">Goal Description</th>
+                                            <th data-i18n="th_status">Status</th>
+                                            <th data-i18n="th_deadline">Deadline</th>
+                                            <th data-i18n="th_notes">Notes</th>
+                                            <th class="col-actions" data-i18n="th_actions"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -426,10 +426,10 @@
 
                         <div class="table-card glass">
                             <div class="table-header-row">
-                                <h2 class="section-title"><i data-lucide="graduation-cap"></i> Courses & Training</h2>
-                                <button id="add-course-btn" class="btn btn-primary btn-sm"><i data-lucide="plus"></i> Add Course</button>
+                                <h2 class="section-title" data-i18n="courses_title"><i data-lucide="graduation-cap"></i> Courses & Training</h2>
+                                <button id="add-course-btn" class="btn btn-primary btn-sm" data-i18n="add_course_btn"><i data-lucide="plus"></i> Add Course</button>
                             </div>
-                            <p class="section-subtitle">Structured learning paths, certifications, or workshops to complete.</p>
+                            <p class="section-subtitle" data-i18n="courses_subtitle">Structured learning paths, certifications, or workshops to complete.</p>
 
                             <div class="table-controls">
                                 <div class="control-group search-group">
@@ -450,9 +450,9 @@
                                 <table class="interactive-table" id="courses-table">
                                     <thead>
                                         <tr>
-                                            <th>Course / Program Name</th>
-                                            <th>Status</th>
-                                            <th class="col-actions"></th>
+                                            <th data-i18n="th_course_name">Course / Program Name</th>
+                                            <th data-i18n="th_status">Status</th>
+                                            <th class="col-actions" data-i18n="th_actions"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -486,7 +486,7 @@
                 <div class="footer-inner">
                     <span class="footer-brand">
                         <span class="footer-diamond"></span>
-                        <span id="footer-space-name">Career Development Plan</span>
+                        <span id="footer-space-name" data-i18n="logo_text">Career Development Plan</span>
                     </span>
                     <span class="footer-copy">
                         &copy; <span id="footer-year"></span> — Made by JB. All data stays on your device.
@@ -505,20 +505,20 @@
     <div id="skill-modal" class="modal-overlay">
         <div class="modal-card glass">
             <div class="modal-header">
-                <h3 id="skill-modal-title">Add Skill</h3>
+                <h3 id="skill-modal-title" data-i18n="modal_add_skill">Add Skill</h3>
                 <button class="modal-close-btn icon-btn"><i data-lucide="x"></i></button>
             </div>
             <div class="modal-body">
                 <form id="skill-form">
                     <input type="hidden" id="skill-id">
                     <div class="form-group">
-                        <label for="skill-name">Skill Name</label>
+                        <label for="skill-name" data-i18n="modal_skill_name">Skill Name</label>
                         <input type="text" id="skill-name" required placeholder="e.g., Project Scope Management">
-                        <span class="form-hint" id="hint-skill-name">E.g., HubSpot Campaign Setup, Public Speaking</span>
+                        <span class="form-hint" id="hint-skill-name" data-i18n="hint_skill_name">E.g., HubSpot Campaign Setup, Public Speaking</span>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="skill-current">Current Level</label>
+                            <label for="skill-current" data-i18n="th_current">Current Level</label>
                             <select id="skill-current">
                                 <option value="1 - Beginner">1 - Beginner</option>
                                 <option value="2 - Intermediate">2 - Intermediate</option>
@@ -528,7 +528,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="skill-required">Required Level</label>
+                            <label for="skill-required" data-i18n="th_required">Required Level</label>
                             <select id="skill-required">
                                 <option value="1 - Beginner">1 - Beginner</option>
                                 <option value="2 - Intermediate">2 - Intermediate</option>
@@ -539,20 +539,20 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="skill-gap">Gap Description</label>
+                        <label for="skill-gap" data-i18n="modal_skill_gap">Gap Description</label>
                         <input type="text" id="skill-gap" placeholder="e.g., Level 4: Demonstrates the skill + guides others">
-                        <span class="form-hint" id="hint-skill-gap">Describe the gap between your current and required level</span>
+                        <span class="form-hint" id="hint-skill-gap" data-i18n="hint_skill_gap">Describe the gap between your current and required level</span>
                     </div>
                     <div class="form-group">
-                        <label for="skill-notes">Notes</label>
+                        <label for="skill-notes" data-i18n="modal_notes">Notes</label>
                         <textarea id="skill-notes" placeholder="Any actions or learning materials for this skill..."></textarea>
-                        <span class="form-hint" id="hint-skill-notes">E.g., Books to read, mentors to ask, tools to learn</span>
+                        <span class="form-hint" id="hint-skill-notes" data-i18n="hint_notes">E.g., Books to read, mentors to ask, tools to learn</span>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary modal-cancel-btn">Cancel</button>
-                <button type="submit" form="skill-form" class="btn btn-primary">Save Skill</button>
+                <button type="button" class="btn btn-secondary modal-cancel-btn" data-i18n="modal_cancel">Cancel</button>
+                <button type="submit" form="skill-form" class="btn btn-primary" data-i18n="modal_save">Save Skill</button>
             </div>
         </div>
     </div>
@@ -561,20 +561,20 @@
     <div id="goal-modal" class="modal-overlay">
         <div class="modal-card glass">
             <div class="modal-header">
-                <h3 id="goal-modal-title">Add Goal</h3>
+                <h3 id="goal-modal-title" data-i18n="modal_add_goal">Add Goal</h3>
                 <button class="modal-close-btn icon-btn"><i data-lucide="x"></i></button>
             </div>
             <div class="modal-body">
                 <form id="goal-form">
                     <input type="hidden" id="goal-id">
                     <div class="form-group">
-                        <label for="goal-title">Goal Description</label>
+                        <label for="goal-title" data-i18n="modal_goal_desc">Goal Description</label>
                         <input type="text" id="goal-title" required placeholder="e.g., Complete and roll out book-of-business">
-                        <span class="form-hint" id="hint-goal-title">What specific milestone do you want to hit?</span>
+                        <span class="form-hint" id="hint-goal-title" data-i18n="hint_goal_desc">What specific milestone do you want to hit?</span>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="goal-status">Status</label>
+                            <label for="goal-status" data-i18n="th_status">Status</label>
                             <select id="goal-status">
                                 <option value="Not started">Not started</option>
                                 <option value="In progress">In progress</option>
@@ -582,20 +582,20 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="goal-deadline">Deadline</label>
+                            <label for="goal-deadline" data-i18n="modal_goal_deadline">Deadline</label>
                             <input type="date" id="goal-deadline">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="goal-notes">Notes</label>
+                        <label for="goal-notes" data-i18n="modal_notes">Notes</label>
                         <textarea id="goal-notes" placeholder="Any steps or reference files for this goal..."></textarea>
-                        <span class="form-hint" id="hint-goal-notes">E.g., Key deliverables, links to playbooks, KPIs</span>
+                        <span class="form-hint" id="hint-goal-notes" data-i18n="hint_goal_notes">E.g., Key deliverables, links to playbooks, KPIs</span>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary modal-cancel-btn">Cancel</button>
-                <button type="submit" form="goal-form" class="btn btn-primary">Save Goal</button>
+                <button type="button" class="btn btn-secondary modal-cancel-btn" data-i18n="modal_cancel">Cancel</button>
+                <button type="submit" form="goal-form" class="btn btn-primary" data-i18n="modal_save">Save Goal</button>
             </div>
         </div>
     </div>
@@ -604,19 +604,19 @@
     <div id="course-modal" class="modal-overlay">
         <div class="modal-card glass">
             <div class="modal-header">
-                <h3 id="course-modal-title">Add Course</h3>
+                <h3 id="course-modal-title" data-i18n="modal_add_course">Add Course</h3>
                 <button class="modal-close-btn icon-btn"><i data-lucide="x"></i></button>
             </div>
             <div class="modal-body">
                 <form id="course-form">
                     <input type="hidden" id="course-id">
                     <div class="form-group">
-                        <label for="course-name">Course / Program Name</label>
+                        <label for="course-name" data-i18n="modal_course_name">Course / Program Name</label>
                         <input type="text" id="course-name" required placeholder="e.g., Advanced Google Analytics">
-                        <span class="form-hint" id="hint-course-name">E.g., Google Ads Course, Growth Series Workshop</span>
+                        <span class="form-hint" id="hint-course-name" data-i18n="hint_course_name">E.g., Google Ads Course, Growth Series Workshop</span>
                     </div>
                     <div class="form-group">
-                        <label for="course-status">Status</label>
+                        <label for="course-status" data-i18n="th_status">Status</label>
                         <select id="course-status">
                             <option value="Not started">Not started</option>
                             <option value="In progress">In progress</option>
@@ -626,8 +626,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary modal-cancel-btn">Cancel</button>
-                <button type="submit" form="course-form" class="btn btn-primary">Save Course</button>
+                <button type="button" class="btn btn-secondary modal-cancel-btn" data-i18n="modal_cancel">Cancel</button>
+                <button type="submit" form="course-form" class="btn btn-primary" data-i18n="modal_save">Save Course</button>
             </div>
         </div>
     </div>

@@ -962,7 +962,7 @@ function updateUILanguage() {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (t[key]) {
-            if (el.tagName === "INPUT" && el.hasAttribute("placeholder")) {
+            if ((el.tagName === "INPUT" || el.tagName === "TEXTAREA") && el.hasAttribute("placeholder")) {
                 el.setAttribute("placeholder", t[key]);
             } else {
                 // Keep the lucide icon if the element contains one inside
@@ -975,6 +975,14 @@ function updateUILanguage() {
                     el.innerHTML = t[key];
                 }
             }
+        }
+    });
+
+    // Also handle data-i18n-placeholder specifically
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (t[key]) {
+            el.setAttribute("placeholder", t[key]);
         }
     });
 
